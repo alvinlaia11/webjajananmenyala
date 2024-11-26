@@ -65,16 +65,16 @@ export default function Navbar() {
             {/* Logo dan Text */}
             <motion.a
               href="#home"
-              className="flex items-center gap-3"
+              className="flex items-center gap-6"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <Logo className={`w-8 h-8 ${isScrolled ? 'text-gray-900' : 'text-white'} transition-colors duration-300`} />
-              <span className={`text-lg font-bold ${
+              <Logo className={`w-16 h-16 md:w-20 md:h-20 ${isScrolled ? 'text-gray-900' : 'text-white'} transition-colors duration-300`} />
+              <span className={`text-2xl md:text-3xl font-bold ${
                 isScrolled ? 'text-gray-900' : 'text-white'
               } transition-colors duration-300`}>
-                Jajanan Menyala
+               Jajanan Menyala
               </span>
             </motion.a>
 
