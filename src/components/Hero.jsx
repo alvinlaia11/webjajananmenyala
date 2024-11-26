@@ -1,187 +1,187 @@
 import { motion } from 'framer-motion';
-import { FaInstagram, FaTiktok } from 'react-icons/fa';
-
-const socialLinks = [
-  {
-    name: 'Instagram',
-    href: 'https://www.instagram.com/jajanan_menyala?igsh=MW91dWNxeGE1aWp5cA==',
-    icon: FaInstagram,
-    username: '@jajanan_menyala'
-  },
-  {
-    name: 'TikTok',
-    href: 'https://www.tiktok.com/@jajanan_menyala?_t=8riUwhu9hGa&_r=1',
-    icon: FaTiktok,
-    username: '@jajanan_menyala'
-  }
-];
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-orange-400 via-rose-300 to-amber-300">
-      {/* Background Pattern Overlay - Disederhanakan */}
+    <section className="min-h-screen flex items-center bg-[#F94545] relative overflow-hidden">
+      {/* Background Elements */}
       <div className="absolute inset-0">
-        {/* Dark Gradient Overlay tanpa blur */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/30 via-black/20 to-black/30" />
-        
-        {/* Pattern Overlay dengan opacity yang lebih rendah */}
-        <div className="absolute inset-0 opacity-30" 
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            backgroundSize: '30px 30px'
-          }}
-        />
-
-        {/* Radial Gradient tanpa blur */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.2)_100%)]" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full filter blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-black/10 rounded-full filter blur-3xl" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center">
-          {/* Logo/Brand Name dengan style lebih sederhana */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb-12"
-          >
-            <h1 className="text-4xl md:text-6xl font-bold mb-8 tracking-tight leading-relaxed">
-              <span className="block text-white py-2">
-                Jajanan
-              </span>
-              <span className="block text-white py-2">
-                Menyala
-              </span>
-            </h1>
-
-            {/* Subtitle dengan ukuran yang lebih proporsional */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
-              className="relative inline-block"
-            >
-              <span className="text-2xl md:text-4xl font-bold relative">
-                <span className="text-white">
-                  Cita Rasa Tradisional
-                </span>
-                <span className="ml-2 text-white">Modern</span>
-              </span>
-            </motion.div>
-          </motion.div>
-          
-          {/* Deskripsi dengan ukuran yang lebih kecil dan tanpa blur */}
-          <motion.p
-            className="text-lg md:text-xl text-white mb-12 max-w-2xl mx-auto"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+          {/* Text Content */}
+          <motion.div 
+            className="text-center md:text-left space-y-4 md:space-y-6 order-2 md:order-1"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.8, duration: 0.8 }}
+            transition={{ duration: 1 }}
           >
-            Menghadirkan jajanan tradisional Indonesia dengan sentuhan modern yang 
-            mengutamakan kualitas dan kelezatan dalam setiap sajian
-          </motion.p>
-          
-          {/* Buttons dengan ukuran yang lebih proporsional */}
-          <motion.div
-            className="flex flex-col md:flex-row justify-center items-center gap-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.8 }}
-          >
-            {/* CTA Button */}
-            <motion.a
-              href="#products"
-              className="group relative overflow-hidden bg-white/20
-                        px-6 py-3 rounded-full border border-white/30
-                        font-medium text-base text-white
-                        hover:bg-white/30 transition-all duration-300
-                        flex items-center gap-2"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            {/* Main Title with Multiple Cloud Effects */}
+            <motion.div 
+              className="relative"
+              initial={{ y: 50 }}
+              animate={{ y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <span className="relative z-10">Lihat Menu Kami</span>
-              <motion.span
-                className="group-hover:translate-x-1 transition-transform duration-300"
-              >
-                <svg 
-                  className="w-4 h-4" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth="2" 
-                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  />
-                </svg>
-              </motion.span>
-            </motion.a>
-
-            {/* Social Media Links dengan ukuran yang lebih kecil */}
-            <div className="flex gap-4">
-              {socialLinks.map((social) => (
-                <motion.a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center gap-2 px-3 py-2 rounded-full
-                            bg-white/10 border border-white/20
-                            hover:bg-white/20 transition-all duration-300"
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <social.icon className="w-4 h-4 text-white" />
-                  <span className="text-white text-sm">
-                    {social.username}
-                  </span>
-                </motion.a>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Scroll Indicator dengan ukuran yang lebih kecil */}
-          <motion.div
-            className="flex flex-col items-center gap-2 mt-16"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.5, duration: 0.8 }}
-          >
-            <motion.span 
-              className="text-white/80 text-xs font-medium"
-              animate={{ opacity: [0.5, 1, 0.5] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            >
-              Scroll untuk melihat menu
-            </motion.span>
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            >
-              <svg 
-                className="w-5 h-5 text-white" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
-                  d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              <div className="relative space-y-2">
+                {/* Cloud Effects - Adjusted for mobile */}
+                <motion.div
+                  className="absolute -right-4 top-0 w-12 md:w-16 h-12 md:h-16 bg-white rounded-full blur-sm"
+                  animate={{ 
+                    scale: [1, 1.1, 1],
+                    opacity: [0.7, 0.9, 0.7]
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
                 />
-              </svg>
+                {/* Cloud Effect 2 */}
+                <motion.div
+                  className="absolute -right-12 top-8 w-20 h-20 bg-white rounded-full blur-sm"
+                  animate={{ 
+                    scale: [1, 1.15, 1],
+                    opacity: [0.6, 0.8, 0.6]
+                  }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 0.5
+                  }}
+                />
+                {/* Cloud Effect 3 */}
+                <motion.div
+                  className="absolute right-20 -top-4 w-14 h-14 bg-white rounded-full blur-sm"
+                  animate={{ 
+                    scale: [1, 1.2, 1],
+                    opacity: [0.5, 0.7, 0.5]
+                  }}
+                  transition={{
+                    duration: 4.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 1
+                  }}
+                />
+                {/* Cloud Effect 4 */}
+                <motion.div
+                  className="absolute right-8 top-12 w-12 h-12 bg-white rounded-full blur-sm"
+                  animate={{ 
+                    scale: [1, 1.25, 1],
+                    opacity: [0.4, 0.6, 0.4]
+                  }}
+                  transition={{
+                    duration: 3.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 1.5
+                  }}
+                />
+                {/* Cloud Effect 5 */}
+                <motion.div
+                  className="absolute -right-8 -top-8 w-24 h-24 bg-white rounded-full blur-md"
+                  animate={{ 
+                    scale: [1, 1.1, 1],
+                    opacity: [0.3, 0.5, 0.3]
+                  }}
+                  transition={{
+                    duration: 6,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 2
+                  }}
+                />
+                <h1 className="text-3xl md:text-4xl font-bold text-white leading-tight">
+                  Selamat datang di
+                </h1>
+                <h1 className="text-3xl md:text-4xl font-bold text-white leading-tight">
+                  UMKM Jajanan Menyala
+                </h1>
+              </div>
             </motion.div>
+
+            {/* Tagline */}
+            <motion.p
+              className="text-lg md:text-xl text-black font-bold"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+            >
+              #Rasanya menyala bosku
+            </motion.p>
+
+            {/* Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="pt-2 md:pt-4"
+            >
+              <motion.a
+                href="#about"
+                className="inline-block bg-[#9AE66E] hover:bg-[#8AD562] text-white 
+                         px-6 md:px-8 py-2 rounded-full text-sm md:text-base font-medium 
+                         transform transition-all duration-300
+                         hover:shadow-lg w-full md:w-auto text-center"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                About Us
+              </motion.a>
+            </motion.div>
+          </motion.div>
+
+          {/* Image Section */}
+          <motion.div
+            className="relative order-1 md:order-2"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+          >
+            <div className="relative aspect-[4/3] md:aspect-[4/3] rounded-xl md:rounded-2xl overflow-hidden shadow-xl">
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-tr from-black/10 to-transparent"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+              />
+              <motion.img
+                src="/images/gambar1.jpg"
+                alt="Jajanan Menyala Showcase"
+                className="w-full h-full object-cover"
+                initial={{ scale: 1.1 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 1.5 }}
+              />
+            </div>
           </motion.div>
         </div>
       </div>
+
+      {/* Mobile Scroll Indicator */}
+      <motion.div 
+        className="absolute bottom-4 left-1/2 transform -translate-x-1/2 md:hidden"
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 1.5, repeat: Infinity }}
+      >
+        <svg 
+          className="w-6 h-6 text-white/60" 
+          fill="none" 
+          stroke="currentColor" 
+          viewBox="0 0 24 24"
+        >
+          <path 
+            strokeLinecap="round" 
+            strokeLinejoin="round" 
+            strokeWidth={2} 
+            d="M19 14l-7 7m0 0l-7-7m7 7V3" 
+          />
+        </svg>
+      </motion.div>
     </section>
   );
 } 
