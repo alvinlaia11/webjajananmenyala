@@ -14,13 +14,13 @@ export default function FloatingButton() {
   const deliveryOptions = [
     {
       name: 'GoFood',
-      logo: 'https://seeklogo.com/images/G/gofood-logo-0581DE183D-seeklogo.com.png',
+      logo: 'https://seduhteh.wordpress.com/wp-content/uploads/2019/11/logo-gofood-baru.png',
       link: 'https://gofood.link/u/qDNvb',
       bgColor: 'bg-green-500'
     },
     {
       name: 'GrabFood',
-      logo: 'https://seeklogo.com/images/G/grab-food-logo-5B12FDE513-seeklogo.com.png',
+      logo: 'https://seduhteh.wordpress.com/wp-content/uploads/2019/11/grabfood-vector-logo.png',
       link: 'https://r.grab.com/g/6-20241126_201928_AA6F38DB26134671AB24860120475FFB_MEXMPS-6-C6MKRUETA4NWKE',
       bgColor: 'bg-green-600'
     }
