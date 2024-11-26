@@ -8,4 +8,12 @@ export default defineConfig({
       include: "**/*.{jsx,tsx,js,ts,svg}",
     })
   ],
+  server: {
+    host: true,
+    port: process.env.PORT || 3000
+  },
+  preview: {
+    host: true,
+    port: process.env.PORT || 3000
+  }
 })
