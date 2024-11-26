@@ -205,7 +205,7 @@ export default function About() {
           ))}
         </div>
 
-        {/* Timeline/Milestone Section - New */}
+        {/* Timeline/Milestone Section */}
         <motion.div 
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24"
           initial={{ opacity: 0, y: 50 }}
@@ -218,12 +218,13 @@ export default function About() {
             <p className="text-gray-600">Melihat kembali perjalanan Jajanan Menyala dari waktu ke waktu</p>
           </div>
 
+          {/* Timeline Container */}
           <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-primary via-secondary to-primary"></div>
+            {/* Timeline Line - Hidden on mobile */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-primary via-secondary to-primary hidden md:block" />
 
             {/* Timeline Items */}
-            <div className="space-y-12">
+            <div className="space-y-8 md:space-y-12">
               {milestones.map((milestone, index) => (
                 <motion.div
                   key={milestone.year}
@@ -233,16 +234,34 @@ export default function About() {
                   viewport={{ once: false, margin: "-100px" }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
                 >
-                  <div className={`flex items-center ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}>
+                  {/* Mobile Layout */}
+                  <div className="md:hidden bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                        <span className="text-sm font-bold text-white">{milestone.year}</span>
+                      </div>
+                      <h4 className="text-xl font-bold text-gray-900">{milestone.title}</h4>
+                    </div>
+                    <p className="text-gray-600">{milestone.description}</p>
+                  </div>
+
+                  {/* Desktop Layout */}
+                  <div className={`hidden md:flex items-center ${
+                    index % 2 === 0 ? 'flex-row-reverse' : ''
+                  }`}>
                     <div className="w-1/2" />
-                    <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center z-10">
-                      <span className="text-sm font-bold text-gray-900">{milestone.year}</span>
+                    <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center z-10 flex-shrink-0">
+                      <span className="text-sm font-bold text-white">{milestone.year}</span>
                     </div>
                     <div className="w-1/2" />
                   </div>
-                  <div className={`mt-4 ${index % 2 === 0 ? 'text-right pr-12' : 'text-left pl-12'}`}>
-                    <h4 className="text-xl font-bold text-gray-900 mb-2">{milestone.title}</h4>
-                    <p className="text-gray-600">{milestone.description}</p>
+                  <div className={`hidden md:block mt-4 ${
+                    index % 2 === 0 ? 'text-right pr-12' : 'text-left pl-12'
+                  }`}>
+                    <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 inline-block max-w-lg">
+                      <h4 className="text-xl font-bold text-gray-900 mb-2">{milestone.title}</h4>
+                      <p className="text-gray-600">{milestone.description}</p>
+                    </div>
                   </div>
                 </motion.div>
               ))}
