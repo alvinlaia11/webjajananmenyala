@@ -1,17 +1,15 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaWhatsapp, FaMotorcycle, FaTimes } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
+import { getWhatsAppUrl } from '../utils/whatsapp';
 
 export default function FloatingButton() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showBalloon, setShowBalloon] = useState(false);
   const [isBalloonClosed, setIsBalloonClosed] = useState(false);
   
-  const whatsappMessage = encodeURIComponent(
-    "Halo Jajanan Menyala! Saya ingin bertanya mengenai menu yang tersedia."
-  );
-
-  const whatsappUrl = `https://wa.me/6282130363881?text=${whatsappMessage}`;
+  const whatsappMessage = "Halo Jajanan Menyala! Saya ingin bertanya mengenai menu yang tersedia.";
+  const whatsappUrl = getWhatsAppUrl('6282130363881', whatsappMessage);
 
   const deliveryOptions = [
     {

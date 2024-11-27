@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaInstagram, FaTiktok, FaWhatsapp } from 'react-icons/fa';
 import Logo from './Logo';
+import { getWhatsAppUrl } from '../utils/whatsapp';
 
 const menuItems = [
   { name: 'Home', href: '#home' },
@@ -29,7 +30,7 @@ const socialLinks = [
   },
   {
     name: 'WhatsApp',
-    href: 'https://wa.me/6282130363881?text=Halo%20Jajanan%20Menyala!%20Saya%20ingin%20bertanya%20mengenai%20menu%20yang%20tersedia',
+    href: getWhatsAppUrl('6282130363881', 'Halo Jajanan Menyala! Saya ingin bertanya mengenai menu yang tersedia.'),
     icon: FaWhatsapp,
     hoverColor: 'hover:text-green-500'
   }

@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion';
 import { FaWhatsapp, FaInstagram, FaTiktok } from 'react-icons/fa';
 import { SiGrab, SiGojek } from 'react-icons/si';
+import { getWhatsAppUrl } from '../utils/whatsapp';
 
 export default function Contact() {
+  const whatsappUrl = getWhatsAppUrl('6282130363881', 'Halo Jajanan Menyala! Saya ingin bertanya mengenai menu yang tersedia.');
+
   return (
     <section id="contact" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -85,7 +88,9 @@ export default function Contact() {
               <h3 className="text-2xl font-bold text-gray-900">Find Us</h3>
             </div>
             <div className="grid grid-cols-3 gap-6 pl-4">
-              <a href="https://wa.me/6282130363881?text=Halo%20Jajanan%20Menyala!%20Saya%20ingin%20bertanya%20mengenai%20menu%20yang%20tersedia" 
+              <a href={whatsappUrl} 
+                 target="_blank"
+                 rel="noopener noreferrer"
                  className="flex items-center gap-3 text-gray-700 hover:text-green-500 transition-all duration-300 transform hover:-translate-y-1">
                 <FaWhatsapp className="w-8 h-8" />
                 <span className="text-lg font-medium">WA</span>
