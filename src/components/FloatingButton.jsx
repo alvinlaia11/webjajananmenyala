@@ -11,6 +11,8 @@ export default function FloatingButton() {
     "Halo Jajanan Menyala! Saya ingin bertanya mengenai menu yang tersedia."
   );
 
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=6282130363881&text=${whatsappMessage}`;
+
   const deliveryOptions = [
     {
       name: 'GoFood',
@@ -128,7 +130,7 @@ export default function FloatingButton() {
 
             {/* WhatsApp Button */}
             <motion.a
-              href={`https://wa.me/6282130363881?text=${whatsappMessage}`}
+              href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, x: 50 }}
