@@ -69,23 +69,25 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
-            {/* Logo dan Text */}
+            {/* Logo dan Text - Perbaikan ukuran dan spacing */}
             <motion.button
               onClick={scrollToTop}
-              className="flex items-center gap-6 cursor-pointer"
+              className="flex items-center gap-2 sm:gap-4 cursor-pointer"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
             >
-              <Logo className={`w-16 h-16 md:w-20 md:h-20 ${isScrolled ? 'text-gray-900' : 'text-white'} transition-colors duration-300`} />
-              <span className={`text-2xl md:text-3xl font-bold ${
+              <Logo className={`w-12 h-12 sm:w-16 sm:h-16 ${
+                isScrolled ? 'text-gray-900' : 'text-white'
+              } transition-colors duration-300`} />
+              <span className={`text-lg sm:text-2xl font-bold truncate ${
                 isScrolled ? 'text-gray-900' : 'text-white'
               } transition-colors duration-300`}>
-               Jajanan Menyala
+                Jajanan Menyala
               </span>
             </motion.button>
 
-            {/* Desktop Menu */}
+            {/* Desktop Menu - tidak ada perubahan */}
             <div className="hidden md:flex items-center space-x-8">
               {/* Navigation Links */}
               <div className="flex space-x-6">
@@ -134,18 +136,16 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Menu Button - Perbaikan posisi dan ukuran */}
             <motion.button
               onClick={() => setIsOpen(!isOpen)}
-              className={`md:hidden p-2 rounded-lg backdrop-blur-sm
-                ${isScrolled 
-                  ? 'bg-gray-100' 
-                  : 'bg-white/20'}`}
+              className={`md:hidden p-2 rounded-lg backdrop-blur-sm z-50
+                ${isScrolled ? 'bg-gray-100' : 'bg-white/20'}`}
               whileTap={{ scale: 0.95 }}
             >
-              <div className="w-6 h-5 relative flex flex-col justify-between">
+              <div className="w-5 h-4 relative flex flex-col justify-between">
                 <motion.span
-                  animate={isOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
+                  animate={isOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
                   className={`w-full h-0.5 block transition-transform origin-left
                     ${isScrolled ? 'bg-gray-900' : 'bg-white'}`}
                 ></motion.span>
@@ -155,7 +155,7 @@ export default function Navbar() {
                     ${isScrolled ? 'bg-gray-900' : 'bg-white'}`}
                 ></motion.span>
                 <motion.span
-                  animate={isOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
+                  animate={isOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
                   className={`w-full h-0.5 block transition-transform origin-left
                     ${isScrolled ? 'bg-gray-900' : 'bg-white'}`}
                 ></motion.span>
@@ -164,29 +164,30 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu - Perbaikan tampilan */}
         <AnimatePresence>
           {isOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden bg-white/95 backdrop-blur-lg border-t mt-2"
+              className="md:hidden fixed inset-x-0 top-[60px] bg-white/95 backdrop-blur-lg border-t"
             >
-              <div className="max-w-7xl mx-auto px-4 py-6">
+              <div className="px-4 py-6">
                 <div className="flex flex-col space-y-4">
                   {menuItems.map((item) => (
                     <motion.a
                       key={item.name}
                       href={item.href}
-                      className="text-gray-900 hover:text-secondary font-medium py-2"
+                      className="text-gray-900 hover:text-secondary font-medium py-2 px-4 rounded-lg
+                               hover:bg-gray-100 transition-all duration-300"
                       onClick={() => setIsOpen(false)}
                       whileHover={{ x: 10 }}
                     >
                       {item.name}
                     </motion.a>
                   ))}
-                  <div className="flex space-x-6 pt-4 border-t">
+                  <div className="flex space-x-6 pt-4 border-t px-4">
                     {socialLinks.map((social) => (
                       <motion.a
                         key={social.name}
@@ -207,7 +208,7 @@ export default function Navbar() {
         </AnimatePresence>
       </nav>
 
-      {/* Overlay for Mobile Menu */}
+      {/* Overlay untuk Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
