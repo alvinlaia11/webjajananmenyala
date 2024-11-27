@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ukmjajananmenyala.site/sitemap.xml 
