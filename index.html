@@ -36,16 +36,27 @@
 
       gtag('config', 'G-SRCPGE27Y5');
     </script>
+    <style>
+      html, body {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+        margin: 0;
+        padding: 0;
+      }
+      
+      #root {
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      * {
+        -webkit-tap-highlight-color: transparent;
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <style>
-      body {
-        overflow-x: hidden;
-        width: 100%;
-        position: relative;
-      }
-    </style>
   </body>
 </html>

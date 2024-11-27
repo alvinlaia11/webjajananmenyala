@@ -7,17 +7,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: '#FFD700', // Kuning
-          dark: '#FFC700',
-        },
-        secondary: {
-          DEFAULT: '#FF4136', // Merah
-          dark: '#E60000',
-        }
+        primary: '#F94545',
+        secondary: '#9AE66E',
       },
-      fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+      screens: {
+        'xs': '375px',
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px',
       },
     },
   },
