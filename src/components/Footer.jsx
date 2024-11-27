@@ -21,16 +21,20 @@ const footerSections = [
     title: 'Jam Buka',
     icon: FaClock,
     content: [
-      'Senin - Minggu',
-      '10:00 - 21:00 WIB'
+      'Senin - Jumat',
+      '09:30 - 17:30 WIB',
+      'Sabtu & Minggu',
+      'Tutup'
     ]
   },
   {
     title: 'Lokasi',
     icon: FaMapMarkerAlt,
     content: [
-      'Jl. Contoh No. 123',
-      'Kota, Provinsi 12345'
+      'Jln Dr. Mansyur, Merdeka,',
+      'Kecamatan Medan Baru,',
+      'Kota Medan, Sumatera Utara',
+      '(Seberang Fakultas FK)'
     ]
   }
 ];
@@ -149,6 +153,14 @@ export default function Footer() {
             </motion.div>
           </div>
         </div>
+      </div>
+
+      {/* Just update the address section */}
+      <div className="space-y-2">
+        <h3 className="text-xl font-semibold text-gray-900">Alamat:</h3>
+        <p className="text-gray-700">
+          Jln Dr. Mansyur, Merdeka, Kecamatan Medan Baru, Kota Medan, Sumatera Utara (Seberang Fakultas FK)
+        </p>
       </div>
     </footer>
   );

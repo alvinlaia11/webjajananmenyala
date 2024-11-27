@@ -28,7 +28,7 @@ export default function FloatingButton() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!isBalloonClosed && window.scrollY > 400) {
+      if (!isBalloonClosed && window.scrollY > 300) {
         setShowBalloon(true);
       }
     };
@@ -43,7 +43,7 @@ export default function FloatingButton() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 flex flex-col items-end gap-4 z-50">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 flex flex-col items-end gap-4 z-50">
       {/* Chat Balloon */}
       <AnimatePresence>
         {showBalloon && !isMenuOpen && !isBalloonClosed && (
@@ -51,7 +51,7 @@ export default function FloatingButton() {
             initial={{ opacity: 0, y: 20, scale: 0.8 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.8 }}
-            className="relative bg-white rounded-2xl shadow-xl p-4 max-w-[280px] mb-4"
+            className="relative bg-white rounded-2xl shadow-xl p-4 max-w-[280px] sm:max-w-[320px] mb-4"
           >
             {/* Close Button */}
             <button
@@ -70,21 +70,19 @@ export default function FloatingButton() {
               <p className="text-xs text-gray-600">
                 Nikmati menu spesial kami melalui GoFood atau GrabFood. Klik tombol di bawah untuk memesan.
               </p>
-              <div className="flex justify-between items-center">
-                <button
-                  onClick={() => {
-                    setShowBalloon(false);
-                    setIsMenuOpen(true);
-                  }}
-                  className="text-xs font-medium text-red-500 hover:text-red-600
-                             transition-colors duration-200 flex items-center gap-1"
-                >
-                  Pesan Sekarang
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-              </div>
+              <button
+                onClick={() => {
+                  setShowBalloon(false);
+                  setIsMenuOpen(true);
+                }}
+                className="text-xs font-medium text-[#F94545] hover:text-[#E03B3B]
+                           transition-colors duration-200 flex items-center gap-1"
+              >
+                Pesan Sekarang
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
             </div>
 
             {/* Chat Tail */}
@@ -114,14 +112,15 @@ export default function FloatingButton() {
                 exit={{ opacity: 0, x: 50 }}
                 transition={{ delay: index * 0.1 }}
                 className="flex items-center gap-3 bg-white px-4 py-2 rounded-full shadow-lg
-                          hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                          hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1
+                          w-full sm:w-auto"
               >
                 <img 
                   src={option.logo} 
                   alt={option.name}
                   className="w-8 h-8 object-contain"
                 />
-                <span className="text-sm font-medium text-gray-700">
+                <span className="text-sm font-medium text-gray-700 whitespace-nowrap">
                   Pesan di {option.name}
                 </span>
               </motion.a>
@@ -137,20 +136,21 @@ export default function FloatingButton() {
               exit={{ opacity: 0, x: 50 }}
               transition={{ delay: 0.2 }}
               className="flex items-center gap-3 bg-green-500 px-4 py-2 rounded-full shadow-lg
-                        hover:bg-green-600 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                        hover:bg-green-600 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1
+                        w-full sm:w-auto"
             >
               <FaWhatsapp className="w-6 h-6 text-white" />
-              <span className="text-sm font-medium text-white">Chat WhatsApp</span>
+              <span className="text-sm font-medium text-white whitespace-nowrap">Chat WhatsApp</span>
             </motion.a>
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* Main Menu Toggle Button */}
+      {/* Main Toggle Button */}
       <motion.button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
         className={`p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300
-                   ${isMenuOpen ? 'bg-red-500 hover:bg-red-600' : 'bg-primary hover:bg-primary/90'}`}
+                   ${isMenuOpen ? 'bg-[#F94545] hover:bg-[#E03B3B]' : 'bg-[#9AE66E] hover:bg-[#8AD562]'}`}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >
