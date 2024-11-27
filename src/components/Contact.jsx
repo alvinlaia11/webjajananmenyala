@@ -85,7 +85,7 @@ export default function Contact() {
               <h3 className="text-2xl font-bold text-gray-900">Find Us</h3>
             </div>
             <div className="grid grid-cols-3 gap-6 pl-4">
-              <a href="https://api.whatsapp.com/send?phone=6282130363881&text=Halo%20Jajanan%20Menyala!%20Saya%20ingin%20bertanya%20mengenai%20menu%20yang%20tersedia." 
+              <a href="https://wa.me/6282130363881?text=Halo%20Jajanan%20Menyala!%20Saya%20ingin%20bertanya%20mengenai%20menu%20yang%20tersedia" 
                  className="flex items-center gap-3 text-gray-700 hover:text-green-500 transition-all duration-300 transform hover:-translate-y-1">
                 <FaWhatsapp className="w-8 h-8" />
                 <span className="text-lg font-medium">WA</span>

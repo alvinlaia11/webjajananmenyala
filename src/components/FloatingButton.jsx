@@ -11,7 +11,7 @@ export default function FloatingButton() {
     "Halo Jajanan Menyala! Saya ingin bertanya mengenai menu yang tersedia."
   );
 
-  const whatsappUrl = `https://api.whatsapp.com/send?phone=6282130363881&text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/6282130363881?text=${whatsappMessage}`;
 
   const deliveryOptions = [
     {

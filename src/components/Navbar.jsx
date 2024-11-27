@@ -29,7 +29,7 @@ const socialLinks = [
   },
   {
     name: 'WhatsApp',
-    href: 'https://api.whatsapp.com/send?phone=6282130363881&text=Halo%20Jajanan%20Menyala!%20Saya%20ingin%20bertanya%20mengenai%20menu%20yang%20tersedia.',
+    href: 'https://wa.me/6282130363881?text=Halo%20Jajanan%20Menyala!%20Saya%20ingin%20bertanya%20mengenai%20menu%20yang%20tersedia',
     icon: FaWhatsapp,
     hoverColor: 'hover:text-green-500'
   }
