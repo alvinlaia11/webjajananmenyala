@@ -4,12 +4,10 @@ import { FaInstagram, FaTiktok, FaWhatsapp } from 'react-icons/fa';
 import Logo from './Logo';
 
 const menuItems = [
-  { name: 'Beranda', href: '#home' },
-  { name: 'Tentang', href: '#about' },
+  { name: 'Home', href: '#home' },
+  { name: 'About Us', href: '#about' },
   { name: 'Menu', href: '#products' },
-  { name: 'Galeri', href: '#gallery' },
-  { name: 'Promo', href: '#promos' },
-  { name: 'FAQ', href: '#faq' },
+  { name: 'Contact Us', href: '#contact' },
 ];
 
 const whatsappMessage = encodeURIComponent(
@@ -51,6 +49,14 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Function to scroll to top
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <>
       <nav 
@@ -63,9 +69,9 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             {/* Logo dan Text */}
-            <motion.a
-              href="#home"
-              className="flex items-center gap-6"
+            <motion.button
+              onClick={scrollToTop}
+              className="flex items-center gap-6 cursor-pointer"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
@@ -76,7 +82,7 @@ export default function Navbar() {
               } transition-colors duration-300`}>
                Jajanan Menyala
               </span>
-            </motion.a>
+            </motion.button>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-8">
@@ -127,7 +133,7 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* Mobile Menu Button dengan style baru */}
+            {/* Mobile Menu Button */}
             <motion.button
               onClick={() => setIsOpen(!isOpen)}
               className={`md:hidden p-2 rounded-lg backdrop-blur-sm

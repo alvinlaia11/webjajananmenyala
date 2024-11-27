@@ -259,7 +259,7 @@ export default function Products() {
               {category.items.map((item, itemIndex) => (
                 <motion.div
                   key={item.id}
-                  className="group"
+                  className="group h-full"
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: false, margin: "-100px" }}
@@ -267,9 +267,9 @@ export default function Products() {
                   whileHover={{ y: -5 }}
                 >
                   {/* Card Container */}
-                  <div className="relative bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+                  <div className="relative bg-white h-full rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col">
                     {/* Image Section dengan Overlay yang Lebih Menarik */}
-                    <div className="relative aspect-[4/3] overflow-hidden">
+                    <div className="relative w-full aspect-[4/3]">
                       <img
                         src={item.image}
                         alt={item.name}
@@ -292,7 +292,7 @@ export default function Products() {
                           initial={{ x: -50, opacity: 0 }}
                           animate={{ x: 0, opacity: 1 }}
                           className="absolute top-4 left-4 bg-gradient-to-r from-primary to-secondary 
-                                     shadow-lg rounded-xl px-4 py-2 text-sm font-bold text-gray-900 
+                                     shadow-lg rounded-xl px-4 py-2 text-sm font-bold text-white 
                                      flex items-center gap-2 transform group-hover:scale-105 transition-all duration-300"
                         >
                           <FaStar className="w-4 h-4" />
@@ -309,23 +309,23 @@ export default function Products() {
                       </div>
                     </div>
 
-                    {/* Content Section dengan Layout Baru */}
-                    <div className="p-6">
+                    {/* Content Section dengan Layout Baru - Fixed Height */}
+                    <div className="p-6 flex flex-col flex-grow">
                       {/* Title dengan Underline Effect */}
                       <div className="relative mb-4 pb-2">
-                        <h4 className="text-xl font-bold text-gray-900 group-hover:text-secondary transition-colors duration-300">
+                        <h4 className="text-xl font-bold text-gray-900 group-hover:text-secondary transition-colors duration-300 line-clamp-1">
                           {item.name}
                         </h4>
                         <div className="absolute bottom-0 left-0 w-1/4 h-0.5 bg-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
                       </div>
 
                       {/* Description dengan Style Baru */}
-                      <p className="text-gray-600 line-clamp-2 mb-4 text-sm leading-relaxed">
+                      <p className="text-gray-600 line-clamp-2 mb-4 text-sm leading-relaxed flex-grow">
                         {item.description}
                       </p>
 
                       {/* Tags dengan Design Baru */}
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-2 mt-auto">
                         {item.details.map((detail, index) => (
                           <span 
                             key={index}
