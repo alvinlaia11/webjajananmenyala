@@ -78,7 +78,7 @@ const categories = [
       },
       {
         id: 3,
-        name: 'Udang Gulung Mon',
+        name: 'Udang Gulung Moza',
         description: 'Udang gulung dengan balutan kulit yang crispy',
         details: ['Crispy', 'Seafood', 'Premium'],
         price: '15K',
