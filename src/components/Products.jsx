@@ -295,12 +295,14 @@ export default function Products() {
 
             {/* Products Grid */}
             <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8
-              ${category.id === 'snackball' ? 
-                'justify-items-center md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 max-w-3xl mx-auto' : ''}`}>
+              ${category.id === 'snackball' ? 'justify-items-center' : ''}`}>
+              {category.id === 'snackball' && <div className="hidden xl:block" />} {/* Spacer untuk 4 kolom */}
               {category.items.map((item, itemIndex) => (
                 <motion.div
                   key={item.id}
-                  className="group h-full flex"
+                  className={`group h-full flex ${
+                    category.id === 'snackball' ? 'md:max-w-[400px]' : 'w-full'
+                  }`}
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: false, margin: "-100px" }}
@@ -376,6 +378,7 @@ export default function Products() {
                   </div>
                 </motion.div>
               ))}
+              {category.id === 'snackball' && <div className="hidden xl:block" />} {/* Spacer untuk 4 kolom */}
             </div>
           </motion.div>
         ))}
