@@ -1,9 +1,12 @@
 import { motion } from 'framer-motion';
 import { FaArrowRight, FaUtensils, FaMotorcycle } from 'react-icons/fa';
 
-export default function Hero() {
+export default function Hero({ onOrderClick }) {
   return (
     <section className="min-h-screen flex items-center bg-[#990808] relative overflow-hidden px-4 sm:px-6">
+      {/* Spacer untuk header */}
+      <div className="absolute top-0 left-0 w-full h-24 sm:h-20" />
+
       {/* Enhanced Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 right-0 w-48 sm:w-96 h-48 sm:h-96 bg-white/10 rounded-full filter blur-3xl animate-pulse" />
@@ -12,7 +15,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-[url('/patterns/noise.png')] opacity-5" />
       </div>
 
-      <div className="max-w-7xl mx-auto w-full py-12 md:py-20 relative z-10">
+      <div className="max-w-7xl mx-auto w-full pt-32 sm:pt-24 md:pt-32 pb-12 md:pb-20 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Enhanced Text Content */}
           <motion.div 
@@ -94,7 +97,10 @@ export default function Hero() {
               </motion.a>
 
               <motion.a
-                href="#order"
+                onClick={(e) => {
+                  e.preventDefault();
+                  onOrderClick();
+                }}
                 className="group flex items-center gap-2 bg-white/10 hover:bg-white/20 
                          backdrop-blur-sm px-8 py-4 rounded-full text-base font-semibold 
                          text-white transform transition-all duration-300

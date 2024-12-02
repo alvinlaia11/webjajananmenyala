@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -8,16 +9,18 @@ import Footer from './components/Footer'
 import FloatingButton from './components/FloatingButton'
 
 function App() {
+  const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
+
   return (
     <>
       <Navbar />
-      <Hero />
+      <Hero onOrderClick={() => setIsOrderModalOpen(true)} />
       <About />
       <Products />
       <Contact />
-      <CTA />
+      <CTA isModalOpen={isOrderModalOpen} setIsModalOpen={setIsOrderModalOpen} />
       <Footer />
-      <FloatingButton />
+      <FloatingButton onOrderClick={() => setIsOrderModalOpen(true)} />
     </>
   )
 }

@@ -47,9 +47,7 @@ const socialLinks = [
   }
 ];
 
-export default function CTA() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
+export default function CTA({ isModalOpen, setIsModalOpen }) {
   return (
     <>
       <section className="py-20 bg-gradient-to-r from-primary to-secondary relative overflow-hidden">

@@ -10,97 +10,164 @@ const categories = [
     items: [
       {
         id: 1,
-        name: 'Ricebowl Blackpepper',
+        name: 'Rice Bowl Black Pepper',
         description: 'Nasi dengan ayam bumbu blackpepper yang gurih dan sedikit pedas',
         details: ['Bestseller', 'Pedas', 'Gurih'],
-        price: '18K',
-        image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&h=400',
+        price: '12K',
+        image: '/images/blackpepper.jpg',
         badge: 'Best Seller',
         calories: '450 kal'
       },
       {
         id: 2,
-        name: 'Ricebowl Salted Egg',
-        description: 'Nasi dengan ayam saus telur asin yang creamy dan gurih',
-        details: ['Premium', 'Creamy', 'Rich Taste'],
-        price: '20K',
-        image: 'https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&h=400',
+        name: 'Rice Bowl BBQ',
+        description: 'Nasi dengan ayam saus BBQ yang manis gurih',
+        details: ['Premium', 'Sweet', 'Rich Taste'],
+        price: '12K',
+        image: '/images/bbq.jpg',
         badge: 'Premium',
         calories: '520 kal'
       },
-      {
-        id: 3,
-        name: 'Ricebowl Sambal Matah',
-        description: 'Nasi dengan ayam goreng dan sambal matah khas Bali',
-        details: ['Spicy', 'Traditional', 'Fresh'],
-        price: '18K',
-        image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&h=400',
-        calories: '480 kal'
-      },
+      
       {
         id: 4,
-        name: 'Ricebowl Geprek',
-        description: 'Nasi dengan ayam geprek level pedas',
-        details: ['Extra Spicy', 'Popular', 'Local Taste'],
-        price: '18K',
-        image: 'https://images.unsplash.com/photo-1569058242567-93de6f36f8eb?auto=format&fit=crop&w=600&h=400',
-        badge: 'Pedas!!!',
-        calories: '500 kal'
+        name: 'Rice Bowl Suwir',
+        description: 'Nasi dengan ayam suwir bumbu special yang gurih',
+        details: ['Traditional', 'Spicy', 'Authentic'],
+        price: '12K',
+        image: '/images/suwir.jpg',
+        badge: 'Local Taste',
+        calories: '470 kal'
       },
       {
         id: 5,
-        name: 'Ricebowl Korean BBQ',
-        description: 'Nasi dengan ayam bumbu Korean BBQ yang manis pedas',
-        details: ['Korean Style', 'Sweet Spicy', 'Fusion'],
-        price: '20K',
-        image: 'https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=600&h=400',
-        badge: 'New',
-        calories: '510 kal'
-      },
-      {
-        id: 6,
-        name: 'Ricebowl Teriyaki',
+        name: 'Rice Bowl Teriyaki',
         description: 'Nasi dengan ayam saus teriyaki khas Jepang',
-        details: ['Japanese', 'Sweet', 'Family Favorite'],
-        price: '18K',
-        image: 'https://images.unsplash.com/photo-1546069901-d5bfd2cbfb1f?auto=format&fit=crop&w=600&h=400',
-        calories: '460 kal'
+        details: ['Japanese Style', 'Sweet', 'Popular'],
+        price: '12K',
+        image: '/images/teriyaki.jpg',
+        badge: 'Favorite',
+        calories: '500 kal'
       }
     ]
   },
   {
-    id: 'noodles',
-    name: 'Mie Spesial',
-    description: 'Aneka mie dengan racikan bumbu khas',
+    id: 'dimsum',
+    name: 'Dimsum',
+    description: 'Aneka dimsum dengan berbagai varian isi',
     icon: FaStar,
     items: [
       {
-        id: 7,
-        name: 'Mie Goreng Jawa',
-        description: 'Mie goreng dengan bumbu Jawa yang otentik',
-        details: ['Authentic', 'Savory', 'Traditional'],
+        id: 1,
+        name: 'Dimsum Ayam',
+        description: 'Dimsum dengan isian ayam yang juicy',
+        details: ['Fresh', 'Juicy', 'Homemade'],
+        price: '10K',
+        image: '/images/dimsumayam.jpg',
+        badge: 'Best Seller',
+        calories: '220 kal'
+      },
+      {
+        id: 2,
+        name: 'Ekado',
+        description: 'Ekado dengan isian udang dan ayam special',
+        details: ['Premium', 'Seafood', 'Homemade'],
+        price: '12K',
+        image: '/images/ekado.jpg',
+        calories: '200 kal'
+      },
+      {
+        id: 3,
+        name: 'Udang Gulung Mon',
+        description: 'Udang gulung dengan balutan kulit yang crispy',
+        details: ['Crispy', 'Seafood', 'Premium'],
         price: '15K',
-        image: 'https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?auto=format&fit=crop&w=600&h=400',
-        calories: '400 kal'
-      },
-      {
-        id: 8,
-        name: 'Mie Goreng Seafood',
-        description: 'Mie goreng dengan campuran seafood segar',
-        details: ['Seafood', 'Premium', 'Fresh'],
-        price: '22K',
-        image: 'https://images.unsplash.com/photo-1569058242567-93de6f36f8eb?auto=format&fit=crop&w=600&h=400',
+        image: '/images/Udanggulungmonza.jpg',
         badge: 'Premium',
-        calories: '450 kal'
+        calories: '180 kal'
       },
       {
-        id: 9,
-        name: 'Mie Kuah Spesial',
-        description: 'Mie kuah dengan kaldu ayam special',
-        details: ['Hot Soup', 'Comfort Food'],
-        price: '16K',
-        image: 'https://images.unsplash.com/photo-1569058242567-93de6f36f8eb?auto=format&fit=crop&w=600&h=400',
-        calories: '380 kal'
+        id: 4,
+        name: 'Pangsit Pedas',
+        description: 'Pangsit goreng dengan bumbu pedas special',
+        details: ['Spicy', 'Crispy', 'Addictive'],
+        price: '15K',
+        image: '/images/pangsitpedas.jpg',
+        badge: 'Pedas',
+        calories: '200 kal'
+      }
+    ]
+  },
+  {
+    id: 'snackball',
+    name: 'Aneka Bola',
+    description: 'Aneka bola-bola dengan berbagai varian isi',
+    icon: FaLeaf,
+    items: [
+      {
+        id: 1,
+        name: 'Bola Udang',
+        description: 'Bola-bola dengan isian udang yang gurih',
+        details: ['Seafood', 'Crispy', 'Premium'],
+        price: '15K',
+        image: '/images/bolaudang.jpg',
+        badge: 'Best Seller',
+        calories: '180 kal'
+      },
+      {
+        id: 2,
+        name: 'Bola Rambutan',
+        description: 'Bola-bola dengan tekstur rambutan yang unik',
+        details: ['Unique', 'Crispy', 'Special'],
+        price: '15K',
+        image: '/images/bolarambutan.jpg',
+        calories: '160 kal'
+      }
+    ]
+  },
+  {
+    id: 'traditional',
+    name: 'Menu Tradisional',
+    description: 'Aneka menu tradisional dengan cita rasa autentik',
+    icon: FaStar,
+    items: [
+      {
+        id: 1,
+        name: 'Sop Daging',
+        description: 'Sop daging dengan kuah bening segar',
+        details: ['Fresh', 'Healthy', 'Traditional'],
+        price: '15K',
+        image: '/images/sopdaging.jpg',
+        calories: '300 kal'
+      },
+      {
+        id: 2,
+        name: 'Sop Ayam',
+        description: 'Sop ayam dengan kuah gurih dan segar',
+        details: ['Fresh', 'Healthy', 'Comfort Food'],
+        price: '13K',
+        image: '/images/sopayam.jpg',
+        calories: '280 kal'
+      },
+      {
+        id: 3,
+        name: 'Soto Ayam',
+        description: 'Soto ayam dengan kuah kuning yang gurih',
+        details: ['Traditional', 'Authentic', 'Favorite'],
+        price: '13K',
+        image: '/images/sotoayam.jpg',
+        badge: 'Favorite',
+        calories: '320 kal'
+      },
+      {
+        id: 4,
+        name: 'Ayam Penyet',
+        description: 'Ayam penyet dengan sambal pedas special',
+        details: ['Spicy', 'Traditional', 'Popular'],
+        price: '12K',
+        image: '/images/ayampenyet.jpg',
+        badge: 'Pedas',
+        calories: '450 kal'
       }
     ]
   },
@@ -111,69 +178,41 @@ const categories = [
     icon: FaLeaf,
     items: [
       {
-        id: 10,
-        name: 'Chicken Wings',
-        description: 'Sayap ayam crispy dengan saus spesial',
-        details: ['Crispy', 'Spicy Option', 'Shareable'],
-        price: '15K',
-        image: 'https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=600&h=400',
-        calories: '320 kal'
-      },
-      {
-        id: 11,
-        name: 'Potato Wedges',
-        description: 'Kentang wedges dengan bumbu special',
-        details: ['Crispy', 'Seasoned', 'Perfect Snack'],
+        id: 1,
+        name: 'Pancake Mini',
+        description: 'Pancake mini yang lembut dan manis',
+        details: ['Sweet', 'Soft', 'Snack Time'],
         price: '12K',
-        image: 'https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?auto=format&fit=crop&w=600&h=400',
-        calories: '250 kal'
-      },
-      {
-        id: 12,
-        name: 'Cireng Mozzarella',
-        description: 'Cireng isi keju mozzarella meleleh',
-        details: ['Cheesy', 'Traditional', 'Hot'],
-        price: '10K',
-        image: 'https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?auto=format&fit=crop&w=600&h=400',
-        badge: 'New',
-        calories: '200 kal'
-      }
-    ]
-  },
-  {
-    id: 'drinks',
-    name: 'Minuman',
-    description: 'Pilihan minuman segar pendamping',
-    icon: FaLeaf,
-    items: [
-      {
-        id: 13,
-        name: 'Es Teh Lemon',
-        description: 'Teh segar dengan perasan lemon',
-        details: ['Refreshing', 'Fresh'],
-        price: '8K',
-        image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=600&h=400',
-        calories: '80 kal'
-      },
-      {
-        id: 14,
-        name: 'Mango Smoothie',
-        description: 'Smoothie mangga dengan whipped cream',
-        details: ['Fresh', 'Sweet', 'Creamy'],
-        price: '15K',
-        image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=600&h=400',
-        badge: 'Best Seller',
+        image: '/images/pancakemini.jpg',
         calories: '200 kal'
       },
       {
-        id: 15,
-        name: 'Thai Tea',
-        description: 'Teh Thailand dengan susu yang creamy dan manis',
-        details: ['Creamy', 'Sweet', 'Popular'],
+        id: 2,
+        name: 'Taiso',
+        description: 'Taiso dengan isian special',
+        details: ['Unique', 'Traditional', 'Tasty'],
         price: '12K',
-        image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&h=400',
-        badge: 'Favorite',
+        image: '/images/Taiso.jpg',
         calories: '180 kal'
+      },
+      {
+        id: 3,
+        name: 'Lumpia Salad',
+        description: 'Lumpia dengan isian salad segar',
+        details: ['Fresh', 'Healthy', 'Crispy'],
+        price: '12K',
+        image: '/images/lumpiasalad.jpg',
+        calories: '150 kal'
+      },
+      {
+        id: 4,
+        name: 'Lumpiah Kulit Tahu',
+        description: 'Lumpia dengan kulit tahu yang unik',
+        details: ['Unique', 'Vegetarian Option', 'Crispy'],
+        price: '10K',
+        image: '/images/lumpiah.jpg',
+        badge: 'Vegetarian',
+        calories: '170 kal'
       }
     ]
   }
@@ -255,11 +294,13 @@ export default function Products() {
             </motion.div>
 
             {/* Products Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+            <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8
+              ${category.id === 'snackball' ? 
+                'justify-items-center md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 max-w-3xl mx-auto' : ''}`}>
               {category.items.map((item, itemIndex) => (
                 <motion.div
                   key={item.id}
-                  className="group h-full"
+                  className="group h-full flex"
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: false, margin: "-100px" }}
@@ -267,84 +308,71 @@ export default function Products() {
                   whileHover={{ y: -5 }}
                 >
                   {/* Card Container */}
-                  <div className="relative bg-white h-full rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col">
-                    {/* Image Section dengan Overlay yang Lebih Menarik */}
-                    <div className="relative w-full aspect-[4/3]">
+                  <div className="relative bg-white w-full rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col">
+                    {/* Image Section dengan Ukuran Tetap */}
+                    <div className="relative w-full h-[220px]">
                       <img
                         src={item.image}
                         alt={item.name}
-                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                        className="w-full h-full object-cover object-center transform group-hover:scale-110 transition-transform duration-700"
                       />
                       
-                      {/* Improved Overlay Gradient */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      
-                      {/* Price Tag dengan Style Baru */}
+                      {/* Price Tag dengan Style Konsisten */}
                       <div className="absolute top-4 right-4 flex items-center gap-2">
-                        <div className="bg-white/95 backdrop-blur-sm shadow-lg rounded-xl px-4 py-2 text-sm font-bold text-gray-900 transform group-hover:scale-105 transition-all duration-300">
+                        <div className="bg-white/95 backdrop-blur-sm shadow-lg rounded-xl px-4 py-2 text-sm font-bold text-gray-900 transform group-hover:scale-105 transition-all duration-300 min-w-[60px] text-center">
                           {item.price}
                         </div>
                       </div>
 
-                      {/* Badge dengan Animasi */}
+                      {/* Badge dengan Ukuran Konsisten */}
                       {item.badge && (
                         <motion.div 
                           initial={{ x: -50, opacity: 0 }}
                           animate={{ x: 0, opacity: 1 }}
-                          className="absolute top-4 left-4 bg-gradient-to-r from-primary to-secondary 
-                                     shadow-lg rounded-xl px-4 py-2 text-sm font-bold text-white 
-                                     flex items-center gap-2 transform group-hover:scale-105 transition-all duration-300"
+                          className="absolute top-4 left-4 bg-gradient-to-r from-primary to-secondary shadow-lg rounded-xl px-4 py-2 text-sm font-bold text-white flex items-center gap-2 min-w-[100px] justify-center"
                         >
                           <FaStar className="w-4 h-4" />
                           {item.badge}
                         </motion.div>
                       )}
 
-                      {/* Calories Info dengan Style Baru */}
-                      <div className="absolute bottom-4 right-4 bg-black/70 backdrop-blur-sm 
-                                     shadow-lg rounded-xl px-4 py-2 text-sm font-medium text-white 
-                                     opacity-0 group-hover:opacity-100 transform translate-y-2 
-                                     group-hover:translate-y-0 transition-all duration-300">
+                      {/* Calories Info dengan Style Konsisten */}
+                      <div className="absolute bottom-4 right-4 bg-black/70 backdrop-blur-sm shadow-lg rounded-xl px-4 py-2 text-sm font-medium text-white min-w-[80px] text-center">
                         {item.calories}
                       </div>
                     </div>
 
-                    {/* Content Section dengan Layout Baru - Fixed Height */}
-                    <div className="p-6 flex flex-col flex-grow">
-                      {/* Title dengan Underline Effect */}
-                      <div className="relative mb-4 pb-2">
-                        <h4 className="text-xl font-bold text-gray-900 group-hover:text-secondary transition-colors duration-300 line-clamp-1">
+                    {/* Content Section dengan Tinggi Tetap */}
+                    <div className="p-6 flex flex-col h-[200px]">
+                      {/* Title dengan Tinggi Tetap */}
+                      <div className="relative mb-4 pb-2 h-[60px]">
+                        <h4 className="text-xl font-bold text-gray-900 group-hover:text-secondary transition-colors duration-300 line-clamp-2">
                           {item.name}
                         </h4>
                         <div className="absolute bottom-0 left-0 w-1/4 h-0.5 bg-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
                       </div>
 
-                      {/* Description dengan Style Baru */}
-                      <p className="text-gray-600 line-clamp-2 mb-4 text-sm leading-relaxed flex-grow">
+                      {/* Description dengan Tinggi Tetap */}
+                      <p className="text-gray-600 line-clamp-2 mb-4 text-sm leading-relaxed h-[40px]">
                         {item.description}
                       </p>
 
-                      {/* Tags dengan Design Baru */}
-                      <div className="flex flex-wrap gap-2 mt-auto">
+                      {/* Tags dengan Tinggi Tetap */}
+                      <div className="flex flex-wrap gap-2 h-[60px] overflow-hidden">
                         {item.details.map((detail, index) => (
                           <span 
                             key={index}
                             className="inline-flex items-center px-3 py-1 text-xs font-medium
-                                       bg-gray-100 text-gray-700 rounded-lg
-                                       hover:bg-primary/10 hover:text-gray-900 
-                                       transform hover:-translate-y-0.5
-                                       transition-all duration-300"
+                                     bg-gray-100 text-gray-700 rounded-lg
+                                     hover:bg-primary/10 hover:text-gray-900 
+                                     transform hover:-translate-y-0.5
+                                     transition-all duration-300"
                           >
                             {detail}
                           </span>
                         ))}
                       </div>
                     </div>
-
-                    {/* Hover Overlay Effect */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-secondary/5 
-                                   opacity-0 group-hover:opacity-100 pointer-events-none 
-                                   transition-opacity duration-300" />
                   </div>
                 </motion.div>
               ))}
