@@ -155,13 +155,13 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Just update the address section */}
+      {/* Just update the address section
       <div className="space-y-2">
         <h3 className="text-xl font-semibold text-gray-900">Alamat:</h3>
         <p className="text-gray-700">
           Jln Dr. Mansyur, Merdeka, Kecamatan Medan Baru, Kota Medan, Sumatera Utara (Seberang Fakultas FK)
         </p>
-      </div>
+      </div> */}
     </footer>
   );
 } 
