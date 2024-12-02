@@ -3,7 +3,7 @@ import { FaWhatsapp, FaMotorcycle, FaTimes } from 'react-icons/fa';
 import { useState, useEffect } from 'react';
 import { getWhatsAppUrl } from '../utils/whatsapp';
 
-export default function FloatingButton({ onOrderClick }) {
+export default function FloatingButton() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showBalloon, setShowBalloon] = useState(false);
   const [isBalloonClosed, setIsBalloonClosed] = useState(false);
@@ -136,14 +136,17 @@ export default function FloatingButton({ onOrderClick }) {
 
       {/* Main Toggle Button */}
       <motion.button
-        onClick={() => {
-          setIsMenuOpen(false);
-          onOrderClick();
-        }}
-        className="group flex items-center gap-2 bg-white/10 hover:bg-white/20"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        className={`p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300
+                   ${isMenuOpen ? 'bg-[#F94545] hover:bg-[#E03B3B]' : 'bg-[#9AE66E] hover:bg-[#8AD562]'}`}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
       >
-        <FaMotorcycle className="w-4 h-4" />
-        Pesan Sekarang
+        {isMenuOpen ? (
+          <FaTimes className="w-5 h-5 text-white" />
+        ) : (
+          <FaMotorcycle className="w-5 h-5 text-gray-900" />
+        )}
       </motion.button>
 
       {/* Background Overlay */}

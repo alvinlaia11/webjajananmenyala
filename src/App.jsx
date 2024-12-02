@@ -20,7 +20,7 @@ function App() {
       <Contact />
       <CTA isModalOpen={isOrderModalOpen} setIsModalOpen={setIsOrderModalOpen} />
       <Footer />
-      <FloatingButton onOrderClick={() => setIsOrderModalOpen(true)} />
+      <FloatingButton />
     </>
   )
 }

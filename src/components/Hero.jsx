@@ -104,7 +104,8 @@ export default function Hero({ onOrderClick }) {
                 className="group flex items-center gap-2 bg-white/10 hover:bg-white/20 
                          backdrop-blur-sm px-8 py-4 rounded-full text-base font-semibold 
                          text-white transform transition-all duration-300
-                         w-full sm:w-auto justify-center border border-white/20"
+                         w-full sm:w-auto justify-center border border-white/20
+                         cursor-pointer select-none"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
