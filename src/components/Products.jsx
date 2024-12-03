@@ -294,14 +294,14 @@ export default function Products() {
             </motion.div>
 
             {/* Products Grid */}
-            <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8
+            <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8
               ${category.id === 'snackball' ? 'justify-items-center' : ''}`}>
               {category.id === 'snackball' && <div className="hidden xl:block" />} {/* Spacer untuk 4 kolom */}
               {category.items.map((item, itemIndex) => (
                 <motion.div
                   key={item.id}
                   className={`group h-full flex ${
-                    category.id === 'snackball' ? 'md:max-w-[400px]' : 'w-full'
+                    category.id === 'snackball' ? 'w-full max-w-[350px] sm:max-w-[400px]' : 'w-full'
                   }`}
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -312,59 +312,59 @@ export default function Products() {
                   {/* Card Container */}
                   <div className="relative bg-white w-full rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col">
                     {/* Image Section dengan Ukuran Tetap */}
-                    <div className="relative w-full h-[220px]">
+                    <div className="relative w-full h-[180px] sm:h-[220px]">
                       <img
                         src={item.image}
                         alt={item.name}
                         className="w-full h-full object-cover object-center transform group-hover:scale-110 transition-transform duration-700"
                       />
                       
-                      {/* Price Tag dengan Style Konsisten */}
-                      <div className="absolute top-4 right-4 flex items-center gap-2">
-                        <div className="bg-white/95 backdrop-blur-sm shadow-lg rounded-xl px-4 py-2 text-sm font-bold text-gray-900 transform group-hover:scale-105 transition-all duration-300 min-w-[60px] text-center">
+                      {/* Price Tag */}
+                      <div className="absolute top-3 right-3 flex items-center gap-2">
+                        <div className="bg-white/95 backdrop-blur-sm shadow-lg rounded-xl px-3 py-1.5 text-sm font-bold text-gray-900 transform group-hover:scale-105 transition-all duration-300">
                           {item.price}
                         </div>
                       </div>
 
-                      {/* Badge dengan Ukuran Konsisten */}
+                      {/* Badge */}
                       {item.badge && (
                         <motion.div 
                           initial={{ x: -50, opacity: 0 }}
                           animate={{ x: 0, opacity: 1 }}
-                          className="absolute top-4 left-4 bg-gradient-to-r from-primary to-secondary shadow-lg rounded-xl px-4 py-2 text-sm font-bold text-white flex items-center gap-2 min-w-[100px] justify-center"
+                          className="absolute top-3 left-3 bg-gradient-to-r from-primary to-secondary shadow-lg rounded-xl px-3 py-1.5 text-sm font-bold text-white flex items-center gap-2"
                         >
-                          <FaStar className="w-4 h-4" />
+                          <FaStar className="w-3 h-3" />
                           {item.badge}
                         </motion.div>
                       )}
 
-                      {/* Calories Info dengan Style Konsisten */}
-                      <div className="absolute bottom-4 right-4 bg-black/70 backdrop-blur-sm shadow-lg rounded-xl px-4 py-2 text-sm font-medium text-white min-w-[80px] text-center">
+                      {/* Calories Info */}
+                      <div className="absolute bottom-3 right-3 bg-black/70 backdrop-blur-sm shadow-lg rounded-xl px-3 py-1.5 text-xs font-medium text-white">
                         {item.calories}
                       </div>
                     </div>
 
-                    {/* Content Section dengan Tinggi Tetap */}
-                    <div className="p-6 flex flex-col h-[200px]">
-                      {/* Title dengan Tinggi Tetap */}
-                      <div className="relative mb-4 pb-2 h-[60px]">
-                        <h4 className="text-xl font-bold text-gray-900 group-hover:text-secondary transition-colors duration-300 line-clamp-2">
+                    {/* Content Section dengan Padding yang Disesuaikan */}
+                    <div className="p-4 sm:p-6 flex flex-col flex-grow">
+                      {/* Title */}
+                      <div className="relative mb-2 sm:mb-4 pb-2">
+                        <h4 className="text-lg sm:text-xl font-bold text-gray-900 group-hover:text-secondary transition-colors duration-300 line-clamp-2">
                           {item.name}
                         </h4>
                         <div className="absolute bottom-0 left-0 w-1/4 h-0.5 bg-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
                       </div>
 
-                      {/* Description dengan Tinggi Tetap */}
-                      <p className="text-gray-600 line-clamp-2 mb-4 text-sm leading-relaxed h-[40px]">
+                      {/* Description */}
+                      <p className="text-gray-600 line-clamp-2 mb-3 text-sm sm:text-base leading-relaxed">
                         {item.description}
                       </p>
 
-                      {/* Tags dengan Tinggi Tetap */}
-                      <div className="flex flex-wrap gap-2 h-[60px] overflow-hidden">
+                      {/* Tags */}
+                      <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-auto">
                         {item.details.map((detail, index) => (
                           <span 
                             key={index}
-                            className="inline-flex items-center px-3 py-1 text-xs font-medium
+                            className="inline-flex items-center px-2 py-1 text-xs sm:text-sm font-medium
                                      bg-gray-100 text-gray-700 rounded-lg
                                      hover:bg-primary/10 hover:text-gray-900 
                                      transform hover:-translate-y-0.5
