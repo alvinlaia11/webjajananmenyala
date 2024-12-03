@@ -133,42 +133,76 @@ export default function Hero({ onOrderClick }) {
             </motion.div>
           </motion.div>
 
-          {/* Enhanced Image Section */}
+          {/* Enhanced Image Section with Multiple Images */}
           <motion.div
-            className="relative order-1 md:order-2 mx-auto w-full max-w-md md:max-w-none"
+            className="relative order-1 md:order-2 mx-auto w-full max-w-lg md:max-w-none px-4 sm:px-0"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl
-                          border-4 border-white/10 backdrop-blur-sm">
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-tr from-black/20 to-transparent"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-              />
-              <motion.img
-                src="/images/gambar1.jpg"
-                alt="Jajanan Menyala Showcase"
-                className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700"
-                initial={{ scale: 1.1 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 1.5 }}
-              />
-              
-              {/* Added floating badge */}
-              <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm 
-                            px-4 py-2 rounded-full shadow-lg">
-                <span className="text-[#990808] font-semibold">Best Seller 🌟</span>
+            <div className="relative flex gap-4">
+              {/* Image 1 - Large Image (Left) */}
+              <motion.div 
+                className="w-[60%] relative aspect-square rounded-3xl overflow-hidden shadow-xl
+                           border-4 border-white/10 backdrop-blur-sm"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <img
+                  src="/images/gambar3.png"
+                  alt="Jajanan Menyala Showcase 1"
+                  className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700"
+                  style={{ objectPosition: 'center center' }}
+                />
+                {/* Floating badge */}
+                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm 
+                              px-4 py-2 rounded-full shadow-lg">
+                  <span className="text-[#990808] font-semibold">Best Seller 🌟</span>
+                </div>
+              </motion.div>
+
+              {/* Right Side Images Container */}
+              <div className="w-[40%] flex flex-col justify-between">
+                {/* Image 2 - Top Right (Offset to right) */}
+                <motion.div 
+                  className="relative aspect-square w-full ml-auto rounded-3xl overflow-hidden shadow-xl
+                             border-4 border-white/10 backdrop-blur-sm"
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                >
+                  <img
+                    src="/images/gambar4.png"
+                    alt="Jajanan Menyala Showcase 2"
+                    className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700"
+                    style={{ objectPosition: 'center center' }}
+                  />
+                </motion.div>
+
+                {/* Image 3 - Bottom Right */}
+                <motion.div 
+                  className="relative aspect-square w-full rounded-3xl overflow-hidden shadow-xl
+                             border-4 border-white/10 backdrop-blur-sm mt-4"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                >
+                  <img
+                    src="/images/gambar1.png"
+                    alt="Jajanan Menyala Showcase 3"
+                    className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-700"
+                    style={{ objectPosition: 'center center' }}
+                  />
+                </motion.div>
               </div>
             </div>
 
-            {/* Added decorative elements */}
+            {/* Decorative elements */}
             <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-yellow-400/20 
-                          rounded-full blur-2xl animate-pulse" />
+                              rounded-full blur-2xl animate-pulse" />
             <div className="absolute -top-6 -left-6 w-24 h-24 bg-orange-400/20 
-                          rounded-full blur-2xl animate-pulse" />
+                              rounded-full blur-2xl animate-pulse" />
           </motion.div>
         </div>
       </div>
